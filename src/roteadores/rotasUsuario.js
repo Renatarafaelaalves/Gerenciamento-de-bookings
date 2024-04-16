@@ -15,6 +15,4 @@ rotasUsuario.use(autenticandoRotas)
 rotasUsuario.put("/usuario/:id", atualizarDadosDoUsuario);
 rotasUsuario.delete("/usuario/:id", excluirUsuario);
 
-
-
 module.exports = rotasUsuario;

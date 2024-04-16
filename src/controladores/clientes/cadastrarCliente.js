@@ -45,5 +45,6 @@ const cadastrarCliente = async (req, res) => {
         return res.status(500).json({ mensagem: 'Erro no servidor' });
     }
 }
+
 module.exports = cadastrarCliente;
 
