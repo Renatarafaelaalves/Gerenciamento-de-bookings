@@ -22,3 +22,10 @@ git@github.com:Renatarafaelaalves/Gerenciamento-de-bookings.git
 # Isso instalará todas as dependências necessárias listadas no arquivo package.json.
 npm init
 ```
+Agora, no terminal, execute o seguinte comando para iniciar o servidor:
+
+```bash
+#Isso iniciará o servidor usando o nodemon, que monitora quaisquer alterações nos arquivos do projeto e reinicia automaticamente o servidor quando necessário.
+
+npm run dev
+```

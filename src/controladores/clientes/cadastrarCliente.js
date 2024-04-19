@@ -32,8 +32,7 @@ const cadastrarCliente = async (req, res) => {
                 cidade,
                 estado,
                 telefone
-            })
-            .returning('*');
+            });
 
         if (novoCliente) {
             return res.status(201).json({ mensagem: 'Cliente cadastrado com sucesso', novoCliente });
