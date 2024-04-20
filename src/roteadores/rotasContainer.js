@@ -4,6 +4,7 @@ const cadastrarContainer = require("../controladores/containner/cadastrarContain
 const listarContainer = require("../controladores/containner/listarContainer");
 const detalharContainer = require("../controladores/containner/detalharContainer");
 const excluirContainer = require("../controladores/containner/excluirContainer");
+const listarContainersPorBooking = require("../controladores/containner/listarContainerPorBooking");
 
 
 const rotasContainer = express.Router();
@@ -14,5 +15,6 @@ rotasContainer.post("/container/cadastrar", cadastrarContainer );
 rotasContainer.get("/container/listar", listarContainer);
 rotasContainer.get("/container/detalhar/:id", detalharContainer);
 rotasContainer.delete("/container/excluir/:id", excluirContainer);
+rotasContainer.get("/container/listar/booking/:id", listarContainersPorBooking)
 
 module.exports = rotasContainer;
