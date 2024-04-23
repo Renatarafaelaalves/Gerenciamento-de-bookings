@@ -32,5 +32,59 @@ npm run dev
 # Testando as Rotas da API
 Você pode usar ferramentas como o Insomnia para testar as rotas da API. No projeto, fornecemos um arquivo para facilitar o teste das rotas no Insomnia. Basta importar este arquivo para o seu ambiente do Insomnia e começar a explorar as diferentes rotas.
 
-# Banco de Dados
+### Banco de Dados
 Todas as informações são registradas em um banco de dados PostgreSQL. O projeto utiliza um arquivo de conexão para buscar e armazenar informações no PostgreSQL. Também fornecemos um arquivo de despejo de banco de dados (damp) que permite criar rapidamente o banco de dados com a estrutura necessária. Basta executar o arquivo de despejo para configurar o ambiente do banco de dados e começar a utilizar o sistema.
+
+# Rotas
+### Cadastro de Usuário
+
+POST /usuario
+
+Exemplo de requisição
+```bash
+# Corpo da requisição para cadastro de usuário (body)
+{
+	"nome": "Renata",
+	"email": "renata@teste.com",
+	"senha": "123456"
+}
+```
+Exemplos de resposta
+```bash
+{
+	"mensagem": "Usuario cadastrado com sucesso!"
+}
+```
+
+```bash
+{
+    "mensagem": "Já existe usuário cadastrado com o e-mail informado."
+}
+```
+
+### Login do usuário
+
+POST /login
+
+Exemplo de requisição
+```bash
+
+{
+	"email": "renata@teste.com",
+	"senha": "123456"
+}
+
+```
+
+Exemplos de resposta
+```bash
+{
+	"usuario": {
+		"id": 2,
+		"nome": "Renata",
+		"email": "renata@teste.com"
+	},
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzEzNjI0Mjc4LCJleHAiOjE3MTM2NTMwNzh9.GW-oFjwQY_XZjcES3CCP_nVto_O8nNHdTiZ6IGPQBWI" 
+}
+
+```
